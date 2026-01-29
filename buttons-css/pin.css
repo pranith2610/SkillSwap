@@ -1,0 +1,93 @@
+/* GLOBAL */
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f4efe6;
+    padding: 30px;
+}
+
+.pin-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* HEADER */
+.header {
+    margin-bottom: 20px;
+}
+
+.header p {
+    color: #555;
+}
+
+/* FILTER BUTTONS */
+.filter-buttons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.filter-buttons button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.filter-buttons button.active {
+    background: #f1c97a;
+    border-color: transparent;
+}
+
+/* GRID */
+.pin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* CARD */
+.pin-card {
+    background: #faf7f1;
+    padding: 18px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+
+    /* 🔥 IMPORTANT FIX */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px; /* keeps buttons aligned */
+}
+
+.pin-card h4 {
+    margin-top: 0;
+}
+
+.pin-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+/* PIN BUTTON */
+.pin-btn {
+    margin-top: auto; /* 👈 pushes button to bottom */
+    padding: 8px 14px;
+    border-radius: 14px;
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.pin-btn.pinned {
+    background: #f1ddb5;
+    border-color: transparent;
+}

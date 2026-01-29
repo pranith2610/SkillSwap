@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Help & Support | SkillSwap</title>
+    <link rel="stylesheet" href="../buttons-css/help.css">
+</head>
+<body>
+
+<div class="help-container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <h2>Help & Support</h2>
+        <p>We’re here to help you move forward.</p>
+    </div>
+
+    <!-- QUICK HELP -->
+    <div class="quick-help">
+        <h3>Common Issues</h3>
+
+        <div class="issue-buttons">
+            <button data-issue="login">Login / Account Issue</button>
+            <button data-issue="points">Points not updated</button>
+            <button data-issue="course">Course access problem</button>
+            <button data-issue="project">Project submission issue</button>
+            <button data-issue="upload">Notes / Video upload failed</button>
+            <button data-issue="other">Something else</button>
+        </div>
+    </div>
+
+    <!-- SOLUTION BOX -->
+    <div class="solution-box" id="solutionBox">
+        <h3>Solution</h3>
+        <p>Select an issue to see possible solutions.</p>
+    </div>
+
+    <!-- CONTACT SUPPORT -->
+    <div class="contact-support">
+        <h3>Still need help?</h3>
+
+        <form id="supportForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <textarea placeholder="Describe your problem..." required></textarea>
+
+            <button type="submit">Submit Request</button>
+        </form>
+    </div>
+
+</div>
+
+<script src="../buttons-js/help.js"></script>
+</body>
+</html>

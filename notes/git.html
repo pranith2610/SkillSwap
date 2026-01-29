@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Git Notes</title>
+<link rel="stylesheet" href="notes.css">
+</head>
+<body>
+
+<div class="container">
+
+<h1>Git – Version Control System (Detailed Notes)</h1>
+
+<h2>1. Introduction to Git</h2>
+<p>
+Git is a distributed version control system used to track changes in source code
+during software development. It was created by Linus Torvalds in 2005.
+Git helps developers collaborate, manage code versions, and maintain project history.
+</p>
+
+<p>
+Git is widely used in open-source and enterprise software development.
+</p>
+
+<h2>2. Why Version Control is Important</h2>
+<ul>
+<li>Tracks code changes</li>
+<li>Enables team collaboration</li>
+<li>Allows rollback to previous versions</li>
+<li>Prevents code loss</li>
+<li>Manages multiple features simultaneously</li>
+</ul>
+
+<h2>3. History of Git</h2>
+<ul>
+<li>2005 – Git developed by Linus Torvalds</li>
+<li>2008 – GitHub launched</li>
+<li>Present – Git is industry standard</li>
+</ul>
+
+<h2>4. Features of Git</h2>
+<ul>
+<li>Distributed version control</li>
+<li>Fast performance</li>
+<li>Data integrity</li>
+<li>Branching and merging</li>
+<li>Offline support</li>
+</ul>
+
+<h2>5. Git Architecture</h2>
+<p>
+Git consists of the following components:
+</p>
+<ul>
+<li>Working Directory</li>
+<li>Staging Area</li>
+<li>Local Repository</li>
+<li>Remote Repository</li>
+</ul>
+
+<h2>6. Installing Git</h2>
+<p>
+Git can be installed from the official website: git-scm.com.
+After installation, Git can be accessed via terminal or command prompt.
+</p>
+
+<h2>7. Git Configuration</h2>
+<code>
+git config --global user.name "Your Name"
+git config --global user.email "youremail@example.com"
+</code>
+
+<h2>8. Git Repository</h2>
+<p>
+A repository stores all project files and history.
+</p>
+
+<code>
+git init
+</code>
+
+<h2>9. Git Status</h2>
+<p>
+Shows the current state of the working directory and staging area.
+</p>
+
+<code>
+git status
+</code>
+
+<h2>10. Adding Files to Staging Area</h2>
+<code>
+git add filename
+git add .
+</code>
+
+<h2>11. Committing Changes</h2>
+<p>
+Commit saves changes to the local repository.
+</p>
+
+<code>
+git commit -m "Initial commit"
+</code>
+
+<h2>12. Git Log</h2>
+<p>
+Displays commit history.
+</p>
+
+<code>
+git log
+</code>
+
+<h2>13. Branches in Git</h2>
+<p>
+Branches allow parallel development.
+</p>
+
+<code>
+git branch
+git branch new-feature
+</code>
+
+<h2>14. Switching Branches</h2>
+<code>
+git checkout branch-name
+</code>
+
+<h2>15. Merging Branches</h2>
+<p>
+Combines changes from different branches.
+</p>
+
+<code>
+git merge branch-name
+</code>
+
+<h2>16. Git Remote</h2>
+<p>
+Remote repositories store code online.
+</p>
+
+<code>
+git remote add origin url
+</code>
+
+<h2>17. Pushing Code to Remote Repository</h2>
+<code>
+git push origin main
+</code>
+
+<h2>18. Pulling Code from Remote Repository</h2>
+<code>
+git pull origin main
+</code>
+
+<h2>19. Cloning a Repository</h2>
+<code>
+git clone repository-url
+</code>
+
+<h2>20. Git Ignore</h2>
+<p>
+.gitignore file specifies files Git should ignore.
+</p>
+
+<h2>21. Git Stash</h2>
+<p>
+Temporarily saves changes without committing.
+</p>
+
+<code>
+git stash
+git stash pop
+</code>
+
+<h2>22. Git Reset</h2>
+<p>
+Used to undo changes.
+</p>
+
+<code>
+git reset --hard HEAD
+</code>
+
+<h2>23. Git Rebase</h2>
+<p>
+Reapplies commits on top of another base branch.
+</p>
+
+<h2>24. Git vs GitHub</h2>
+<ul>
+<li>Git – Version control system</li>
+<li>GitHub – Cloud-based Git hosting service</li>
+</ul>
+
+<h2>25. Advantages of Git</h2>
+<ul>
+<li>Fast and efficient</li>
+<li>Supports collaboration</li>
+<li>Strong branching model</li>
+</ul>
+
+<h2>26. Disadvantages of Git</h2>
+<ul>
+<li>Steep learning curve</li>
+<li>Complex commands for beginners</li>
+</ul>
+
+<h2>27. Applications of Git</h2>
+<ul>
+<li>Software development</li>
+<li>Open-source projects</li>
+<li>DevOps workflows</li>
+<li>Team collaboration</li>
+</ul>
+
+<h2>28. Summary</h2>
+<p>
+Git is an essential tool for modern software development.
+It helps manage code versions efficiently and supports team collaboration.
+</p>
+
+<!-- RATING SECTION -->
+<div class="rating-section">
+    <h3>Rate this Content</h3>
+
+    <div class="stars">
+        <span data-value="1">★</span>
+        <span data-value="2">★</span>
+        <span data-value="3">★</span>
+        <span data-value="4">★</span>
+        <span data-value="5">★</span>
+    </div>
+
+    <p id="ratingText">No rating yet</p>
+</div>
+
+
+<!-- BACK LINK AT END -->
+<div class="back-link">
+    ← <a href="../front/front.html">Back to SkillSwap</a>
+</div>
+
+</div>
+
+<script src="rating.js"></script>
+
+</body>
+</html>

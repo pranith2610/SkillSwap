@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Create Skill Post</title>
+<link rel="stylesheet" href="../buttons-css/post.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h2>Create a Skill Post</h2>
+  <p class="sub">Share what you know. Share what you learned.</p>
+
+  <label>What skill do you know?</label>
+  <input id="skillTitle" type="text" placeholder="Eg: Web Development, Java">
+
+  <label>Where did you learn from it?</label>
+  <textarea id="skillDesc" placeholder="Explain your experience..."></textarea>
+
+  <label>Category :</label>
+  <div class="category">
+    <button type="button" onclick="selectCategory(this,'Tech')">Tech</button>
+    <button type="button" onclick="selectCategory(this,'Design')">Design</button>
+    <button type="button" onclick="selectCategory(this,'Business')">Business</button>
+    <button type="button" onclick="selectCategory(this,'Other')">Other</button>
+  </div>
+
+  <label>How do you want to share?</label>
+  <div class="share">
+    <button type="button" onclick="selectShare(this,'Teach')">Teach</button>
+    <button type="button" onclick="selectShare(this,'Mentor')">Mentor</button>
+    <button type="button" onclick="selectShare(this,'Share Notes')">Share Notes</button>
+  </div>
+
+  <div class="actions">
+    <button class="clear" onclick="clearForm()">Clear</button>
+    <button class="post" onclick="postSkill()">Post Skill</button>
+  </div>
+
+</div>
+
+<script src="../buttons-js/post.js"></script>
+</body>
+</html>

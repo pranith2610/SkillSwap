@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f4efe6;
+    padding: 30px;
+}
+
+.courses-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* HEADER */
+.header {
+    margin-bottom: 20px;
+}
+
+.header p {
+    color: #555;
+}
+
+/* MODE SELECT */
+.mode-select {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.mode-select button {
+    padding: 10px 24px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.mode-select button.active {
+    background: #f1c97a;
+    border-color: transparent;
+}
+
+/* COURSES GRID */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+/* COURSE CARD */
+.course-card {
+    background: #faf7f1;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+
+    /* 🔑 KEY FIX */
+    display: flex;
+    flex-direction: column;
+    min-height: 240px;
+}
+
+.course-card h3 {
+    margin-top: 0;
+}
+
+.course-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* ACTIONS — ALWAYS AT BOTTOM */
+.course-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: auto; /* 🔥 pushes buttons to bottom */
+}
+
+.course-actions button {
+    flex: 1;
+    padding: 10px;
+    border-radius: 14px;
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.course-actions button:hover {
+    background: #f1ddb5;
+}

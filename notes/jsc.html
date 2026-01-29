@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Notes</title>
+<link rel="stylesheet" href="notes.css">
+</head>
+<body>
+
+<div class="container">
+
+<h1>JavaScript – Detailed Notes</h1>
+
+<h2>1. Introduction to JavaScript</h2>
+<p>
+JavaScript is a high-level, interpreted scripting language used to create
+dynamic and interactive web pages. It was developed by Brendan Eich in 1995.
+JavaScript runs inside the browser and can also be used on the server side
+using environments like Node.js.
+</p>
+
+<p>
+JavaScript is one of the core technologies of the web, along with HTML and CSS.
+</p>
+
+<h2>2. History of JavaScript</h2>
+<ul>
+<li>1995 – Created by Brendan Eich</li>
+<li>1997 – ECMAScript standard introduced</li>
+<li>2009 – Node.js released</li>
+<li>2015 – ES6 introduced modern JavaScript</li>
+</ul>
+
+<h2>3. Features of JavaScript</h2>
+<ul>
+<li>Lightweight and fast</li>
+<li>Interpreted language</li>
+<li>Event-driven</li>
+<li>Platform independent</li>
+<li>Supports object-oriented programming</li>
+<li>Runs in browser and server</li>
+</ul>
+
+<h2>4. JavaScript Execution</h2>
+<p>
+JavaScript code is executed by the browser’s JavaScript engine
+(Chrome uses V8 engine).
+</p>
+
+<h2>5. Basic JavaScript Program</h2>
+<code>
+console.log("Hello, JavaScript");
+</code>
+
+<h2>6. JavaScript Syntax</h2>
+<p>
+JavaScript syntax is similar to C and Java.
+</p>
+
+<code>
+let a = 10;
+let b = 20;
+console.log(a + b);
+</code>
+
+<h2>7. Variables</h2>
+<p>
+Variables are used to store data values.
+</p>
+
+<ul>
+<li>var – function scoped</li>
+<li>let – block scoped</li>
+<li>const – constant value</li>
+</ul>
+
+<code>
+let name = "SkillSwap";
+const pi = 3.14;
+</code>
+
+<h2>8. Data Types</h2>
+<ul>
+<li>Number</li>
+<li>String</li>
+<li>Boolean</li>
+<li>Undefined</li>
+<li>Null</li>
+<li>Object</li>
+<li>Array</li>
+</ul>
+
+<h2>9. Operators</h2>
+<ul>
+<li>Arithmetic Operators</li>
+<li>Comparison Operators</li>
+<li>Logical Operators</li>
+<li>Assignment Operators</li>
+</ul>
+
+<h2>10. Conditional Statements</h2>
+<code>
+let age = 18;
+
+if (age >= 18) {
+    console.log("Eligible to vote");
+} else {
+    console.log("Not eligible");
+}
+</code>
+
+<h2>11. Loops</h2>
+
+<h3>For Loop</h3>
+<code>
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+</code>
+
+<h3>While Loop</h3>
+<code>
+let i = 0;
+while (i < 5) {
+    console.log(i);
+    i++;
+}
+</code>
+
+<h2>12. Functions</h2>
+<p>
+Functions are reusable blocks of code.
+</p>
+
+<code>
+function add(a, b) {
+    return a + b;
+}
+</code>
+
+<h2>13. Arrow Functions</h2>
+<code>
+const add = (a, b) => a + b;
+</code>
+
+<h2>14. Arrays</h2>
+<p>
+Arrays store multiple values in a single variable.
+</p>
+
+<code>
+let fruits = ["apple", "banana", "orange"];
+</code>
+
+<h2>15. Objects</h2>
+<p>
+Objects store data in key-value pairs.
+</p>
+
+<code>
+let student = {
+    name: "John",
+    age: 20
+};
+</code>
+
+<h2>16. String Methods</h2>
+<ul>
+<li>length</li>
+<li>toUpperCase()</li>
+<li>toLowerCase()</li>
+<li>slice()</li>
+</ul>
+
+<h2>17. Array Methods</h2>
+<ul>
+<li>push()</li>
+<li>pop()</li>
+<li>map()</li>
+<li>filter()</li>
+<li>forEach()</li>
+</ul>
+
+<h2>18. DOM (Document Object Model)</h2>
+<p>
+DOM allows JavaScript to interact with HTML elements.
+</p>
+
+<code>
+document.getElementById("demo").innerText = "Hello DOM";
+</code>
+
+<h2>19. Events</h2>
+<p>
+Events respond to user actions like click, input, hover.
+</p>
+
+<code>
+button.addEventListener("click", function() {
+    alert("Button clicked");
+});
+</code>
+
+<h2>20. Form Validation</h2>
+<p>
+JavaScript can validate user input before submitting forms.
+</p>
+
+<h2>21. Error Handling</h2>
+<code>
+try {
+    let x = y + 10;
+} catch (error) {
+    console.log(error);
+}
+</code>
+
+<h2>22. JSON</h2>
+<p>
+JSON is used for data exchange.
+</p>
+
+<code>
+let data = {
+    "name": "SkillSwap",
+    "type": "Learning Platform"
+};
+</code>
+
+<h2>23. JavaScript in Web Development</h2>
+<ul>
+<li>Form validation</li>
+<li>Dynamic content</li>
+<li>API calls</li>
+<li>Animations</li>
+</ul>
+
+<h2>24. Advantages of JavaScript</h2>
+<ul>
+<li>Runs in browser</li>
+<li>Fast execution</li>
+<li>Huge ecosystem</li>
+</ul>
+
+<h2>25. Disadvantages of JavaScript</h2>
+<ul>
+<li>Security risks</li>
+<li>Browser compatibility issues</li>
+</ul>
+
+<h2>26. Applications of JavaScript</h2>
+<ul>
+<li>Web applications</li>
+<li>Mobile apps</li>
+<li>Server-side apps</li>
+<li>Game development</li>
+</ul>
+
+<h2>27. Summary</h2>
+<p>
+JavaScript is a powerful scripting language that enables interactive and
+dynamic web experiences and is essential for modern web development.
+</p>
+
+<!-- RATING SECTION -->
+<div class="rating-section">
+    <h3>Rate this Content</h3>
+
+    <div class="stars">
+        <span data-value="1">★</span>
+        <span data-value="2">★</span>
+        <span data-value="3">★</span>
+        <span data-value="4">★</span>
+        <span data-value="5">★</span>
+    </div>
+
+    <p id="ratingText">No rating yet</p>
+</div>
+
+
+<!-- BACK LINK AT END -->
+<div class="back-link">
+    ← <a href="../front/front.html">Back to SkillSwap</a>
+</div>
+
+</div>
+
+<script src="rating.js"></script>
+
+</body>
+</html>

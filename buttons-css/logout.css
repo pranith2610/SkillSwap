@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f4efe6;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logout-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logout-card {
+    width: 360px;
+    background: #faf7f1;
+    padding: 30px;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.logout-card h2 {
+    margin-bottom: 10px;
+}
+
+.logout-card p {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* BUTTONS */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.actions button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 14px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cancel {
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+.confirm {
+    background: #f1c97a;
+}

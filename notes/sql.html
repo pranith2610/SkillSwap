@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SQL Notes</title>
+<link rel="stylesheet" href="notes.css">
+</head>
+<body>
+
+<div class="container">
+
+<h1>SQL – Structured Query Language (Detailed Notes)</h1>
+
+<h2>1. Introduction to SQL</h2>
+<p>
+SQL stands for Structured Query Language. It is used to store, retrieve,
+manage, and manipulate data in relational database management systems (RDBMS).
+SQL was developed by IBM in the 1970s and later standardized by ANSI.
+</p>
+
+<p>
+SQL is used with databases such as MySQL, PostgreSQL, Oracle, SQL Server,
+and SQLite.
+</p>
+
+<h2>2. Database and DBMS</h2>
+<p>
+A database is an organized collection of data.
+DBMS (Database Management System) is software that manages databases.
+</p>
+
+<h3>Examples of DBMS</h3>
+<ul>
+<li>MySQL</li>
+<li>Oracle</li>
+<li>PostgreSQL</li>
+<li>SQL Server</li>
+</ul>
+
+<h2>3. Characteristics of SQL</h2>
+<ul>
+<li>Easy to learn</li>
+<li>Standardized language</li>
+<li>Supports large databases</li>
+<li>Secure</li>
+<li>Efficient data handling</li>
+</ul>
+
+<h2>4. SQL Data Types</h2>
+
+<h3>Numeric Data Types</h3>
+<ul>
+<li>INT</li>
+<li>FLOAT</li>
+<li>DOUBLE</li>
+</ul>
+
+<h3>Character Data Types</h3>
+<ul>
+<li>CHAR</li>
+<li>VARCHAR</li>
+<li>TEXT</li>
+</ul>
+
+<h3>Date & Time Data Types</h3>
+<ul>
+<li>DATE</li>
+<li>TIME</li>
+<li>DATETIME</li>
+</ul>
+
+<h2>5. SQL Commands</h2>
+<p>
+SQL commands are categorized into five types.
+</p>
+
+<h3>DDL – Data Definition Language</h3>
+<ul>
+<li>CREATE</li>
+<li>ALTER</li>
+<li>DROP</li>
+<li>TRUNCATE</li>
+</ul>
+
+<h3>DML – Data Manipulation Language</h3>
+<ul>
+<li>INSERT</li>
+<li>UPDATE</li>
+<li>DELETE</li>
+</ul>
+
+<h3>DQL – Data Query Language</h3>
+<ul>
+<li>SELECT</li>
+</ul>
+
+<h3>DCL – Data Control Language</h3>
+<ul>
+<li>GRANT</li>
+<li>REVOKE</li>
+</ul>
+
+<h3>TCL – Transaction Control Language</h3>
+<ul>
+<li>COMMIT</li>
+<li>ROLLBACK</li>
+<li>SAVEPOINT</li>
+</ul>
+
+<h2>6. Creating a Table</h2>
+<code>
+CREATE TABLE students (
+    id INT,
+    name VARCHAR(50),
+    age INT
+);
+</code>
+
+<h2>7. Inserting Data</h2>
+<code>
+INSERT INTO students VALUES (1, 'John', 20);
+</code>
+
+<h2>8. Selecting Data</h2>
+<code>
+SELECT * FROM students;
+</code>
+
+<h2>9. WHERE Clause</h2>
+<p>
+Filters records based on conditions.
+</p>
+
+<code>
+SELECT * FROM students WHERE age > 18;
+</code>
+
+<h2>10. UPDATE Statement</h2>
+<code>
+UPDATE students SET age = 21 WHERE id = 1;
+</code>
+
+<h2>11. DELETE Statement</h2>
+<code>
+DELETE FROM students WHERE id = 1;
+</code>
+
+<h2>12. Constraints</h2>
+<ul>
+<li>PRIMARY KEY</li>
+<li>FOREIGN KEY</li>
+<li>UNIQUE</li>
+<li>NOT NULL</li>
+<li>CHECK</li>
+</ul>
+
+<h2>13. Primary Key</h2>
+<p>
+Uniquely identifies each record in a table.
+</p>
+
+<h2>14. Foreign Key</h2>
+<p>
+Establishes relationship between tables.
+</p>
+
+<h2>15. Aggregate Functions</h2>
+<ul>
+<li>COUNT()</li>
+<li>SUM()</li>
+<li>AVG()</li>
+<li>MAX()</li>
+<li>MIN()</li>
+</ul>
+
+<h2>16. GROUP BY Clause</h2>
+<code>
+SELECT age, COUNT(*) FROM students GROUP BY age;
+</code>
+
+<h2>17. HAVING Clause</h2>
+<code>
+SELECT age, COUNT(*) FROM students
+GROUP BY age
+HAVING COUNT(*) > 1;
+</code>
+
+<h2>18. ORDER BY Clause</h2>
+<code>
+SELECT * FROM students ORDER BY age DESC;
+</code>
+
+<h2>19. Joins</h2>
+<p>
+Joins combine rows from multiple tables.
+</p>
+
+<ul>
+<li>INNER JOIN</li>
+<li>LEFT JOIN</li>
+<li>RIGHT JOIN</li>
+<li>FULL JOIN</li>
+</ul>
+
+<h2>20. Subqueries</h2>
+<code>
+SELECT * FROM students
+WHERE age > (SELECT AVG(age) FROM students);
+</code>
+
+<h2>21. Views</h2>
+<p>
+A view is a virtual table.
+</p>
+
+<code>
+CREATE VIEW student_view AS
+SELECT name, age FROM students;
+</code>
+
+<h2>22. Indexes</h2>
+<p>
+Indexes improve query performance.
+</p>
+
+<h2>23. Transactions</h2>
+<p>
+Transactions ensure data integrity.
+</p>
+
+<h2>24. Advantages of SQL</h2>
+<ul>
+<li>Fast data retrieval</li>
+<li>Secure access</li>
+<li>Standard language</li>
+</ul>
+
+<h2>25. Disadvantages of SQL</h2>
+<ul>
+<li>Complex queries can be difficult</li>
+<li>Cost of commercial DBMS</li>
+</ul>
+
+<h2>26. Applications of SQL</h2>
+<ul>
+<li>Web applications</li>
+<li>Banking systems</li>
+<li>E-commerce platforms</li>
+<li>Data analytics</li>
+</ul>
+
+<h2>27. Summary</h2>
+<p>
+SQL is a powerful language for managing and querying relational databases.
+It is essential for backend development and data-driven applications.
+</p>
+
+<!-- RATING SECTION -->
+<div class="rating-section">
+    <h3>Rate this Content</h3>
+
+    <div class="stars">
+        <span data-value="1">★</span>
+        <span data-value="2">★</span>
+        <span data-value="3">★</span>
+        <span data-value="4">★</span>
+        <span data-value="5">★</span>
+    </div>
+
+    <p id="ratingText">No rating yet</p>
+</div>
+
+
+<!-- BACK LINK AT END -->
+<div class="back-link">
+    ← <a href="../front/front.html">Back to SkillSwap</a>
+</div>
+
+</div>
+
+<script src="rating.js"></script>
+
+</body>
+</html>

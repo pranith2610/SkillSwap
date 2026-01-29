@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Python Programming Notes</title>
+<link rel="stylesheet" href="notes.css">
+</head>
+<body>
+
+<div class="container">
+
+<h1>Python Programming – Detailed Notes</h1>
+
+<h2>1. Introduction to Python</h2>
+<p>
+Python is a high-level, interpreted, general-purpose programming language created by
+Guido van Rossum and released in 1991.
+Python focuses on code readability and simplicity, making it one of the easiest
+languages to learn and use.
+</p>
+
+<p>
+Python is widely used in web development, data science, artificial intelligence,
+machine learning, automation, and scripting.
+</p>
+
+<h2>2. History of Python</h2>
+<ul>
+<li>1989 – Python development started</li>
+<li>1991 – Python first released</li>
+<li>2000 – Python 2.0 released</li>
+<li>2010 – Python 3.0 released</li>
+<li>Present – Python dominates AI & Data Science</li>
+</ul>
+
+<h2>3. Features of Python</h2>
+<ul>
+<li>Easy to learn and use</li>
+<li>Interpreted language</li>
+<li>Dynamically typed</li>
+<li>Object-oriented</li>
+<li>Large standard library</li>
+<li>Cross-platform</li>
+<li>Open-source</li>
+</ul>
+
+<h2>4. Python Installation</h2>
+<p>
+Python can be downloaded from the official website: python.org.
+After installation, Python can be run using the terminal or command prompt.
+</p>
+
+<h2>5. First Python Program</h2>
+<code>
+print("Hello, Python!")
+</code>
+
+<h2>6. Python Keywords</h2>
+<p>
+Keywords are reserved words in Python.
+</p>
+<ul>
+<li>if</li>
+<li>else</li>
+<li>elif</li>
+<li>for</li>
+<li>while</li>
+<li>def</li>
+<li>return</li>
+<li>import</li>
+</ul>
+
+<h2>7. Variables in Python</h2>
+<p>
+Variables are used to store data values. Python does not require explicit
+variable declaration.
+</p>
+
+<code>
+x = 10
+name = "SkillSwap"
+</code>
+
+<h2>8. Data Types in Python</h2>
+
+<h3>Built-in Data Types</h3>
+<ul>
+<li>int</li>
+<li>float</li>
+<li>complex</li>
+<li>string</li>
+<li>list</li>
+<li>tuple</li>
+<li>set</li>
+<li>dictionary</li>
+</ul>
+
+<h2>9. Type Casting</h2>
+<code>
+x = int(10.5)
+y = str(25)
+</code>
+
+<h2>10. Operators</h2>
+<ul>
+<li>Arithmetic Operators</li>
+<li>Comparison Operators</li>
+<li>Logical Operators</li>
+<li>Assignment Operators</li>
+</ul>
+
+<h2>11. Conditional Statements</h2>
+<code>
+age = 18
+if age >= 18:
+    print("Eligible to vote")
+else:
+    print("Not eligible")
+</code>
+
+<h2>12. Loops</h2>
+
+<h3>For Loop</h3>
+<code>
+for i in range(5):
+    print(i)
+</code>
+
+<h3>While Loop</h3>
+<code>
+i = 0
+while i < 5:
+    print(i)
+    i += 1
+</code>
+
+<h2>13. Functions</h2>
+<p>
+Functions are reusable blocks of code.
+</p>
+
+<code>
+def add(a, b):
+    return a + b
+</code>
+
+<h2>14. Lambda Functions</h2>
+<code>
+x = lambda a: a + 10
+print(x(5))
+</code>
+
+<h2>15. Lists</h2>
+<p>
+Lists are ordered and mutable collections.
+</p>
+
+<code>
+fruits = ["apple", "banana", "cherry"]
+</code>
+
+<h2>16. Tuples</h2>
+<p>
+Tuples are ordered but immutable collections.
+</p>
+
+<code>
+numbers = (1, 2, 3)
+</code>
+
+<h2>17. Sets</h2>
+<p>
+Sets are unordered collections with unique values.
+</p>
+
+<code>
+colors = {"red", "green", "blue"}
+</code>
+
+<h2>18. Dictionaries</h2>
+<p>
+Dictionaries store data in key-value pairs.
+</p>
+
+<code>
+student = {
+    "name": "John",
+    "age": 20
+}
+</code>
+
+<h2>19. File Handling</h2>
+<p>
+Python supports file handling for reading and writing files.
+</p>
+
+<code>
+file = open("data.txt", "r")
+print(file.read())
+file.close()
+</code>
+
+<h2>20. Exception Handling</h2>
+<code>
+try:
+    x = 10 / 0
+except:
+    print("Error occurred")
+finally:
+    print("Done")
+</code>
+
+<h2>21. Modules</h2>
+<p>
+Modules allow code reuse.
+</p>
+
+<code>
+import math
+print(math.sqrt(16))
+</code>
+
+<h2>22. Object-Oriented Programming</h2>
+<p>
+Python supports OOP concepts like classes and objects.
+</p>
+
+<code>
+class Student:
+    def __init__(self, name):
+        self.name = name
+
+    def display(self):
+        print(self.name)
+</code>
+
+<h2>23. Advantages of Python</h2>
+<ul>
+<li>Easy syntax</li>
+<li>Huge community</li>
+<li>Powerful libraries</li>
+</ul>
+
+<h2>24. Disadvantages of Python</h2>
+<ul>
+<li>Slower execution</li>
+<li>Not ideal for mobile apps</li>
+</ul>
+
+<h2>25. Applications of Python</h2>
+<ul>
+<li>Web Development</li>
+<li>Data Science</li>
+<li>Machine Learning</li>
+<li>Automation</li>
+<li>Game Development</li>
+</ul>
+
+<h2>26. Summary</h2>
+<p>
+Python is a versatile and beginner-friendly programming language used across
+multiple domains. Its simplicity and power make it one of the most popular
+languages in the world.
+</p>
+
+<!-- RATING SECTION -->
+<div class="rating-section">
+    <h3>Rate this Content</h3>
+
+    <div class="stars">
+        <span data-value="1">★</span>
+        <span data-value="2">★</span>
+        <span data-value="3">★</span>
+        <span data-value="4">★</span>
+        <span data-value="5">★</span>
+    </div>
+
+    <p id="ratingText">No rating yet</p>
+</div>
+
+
+<!-- BACK LINK -->
+<div class="back-link">
+    ← <a href="../front/front.html">Back to SkillSwap</a>
+</div>
+
+
+</div>
+
+<script src="rating.js"></script>
+
+</body>
+</html>

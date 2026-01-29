@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f4efe6;
+    padding: 30px;
+}
+
+.help-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* HEADER */
+.header {
+    margin-bottom: 30px;
+}
+
+.header p {
+    color: #555;
+}
+
+/* QUICK HELP */
+.quick-help {
+    background: #faf7f1;
+    padding: 24px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.issue-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.issue-buttons button {
+    padding: 12px;
+    border-radius: 14px;
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.issue-buttons button:hover {
+    background: #f1ddb5;
+}
+
+/* SOLUTION */
+.solution-box {
+    background: #f3e3c0;
+    padding: 24px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.solution-box p {
+    margin: 10px 0 0;
+}
+
+/* CONTACT */
+.contact-support {
+    background: #faf7f1;
+    padding: 24px;
+    border-radius: 20px;
+}
+
+.contact-support form input,
+.contact-support form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 14px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+.contact-support textarea {
+    resize: none;
+    height: 80px;
+}
+
+.contact-support button {
+    padding: 12px 20px;
+    border-radius: 14px;
+    border: none;
+    background: #f1c97a;
+    font-weight: bold;
+    cursor: pointer;
+}
