@@ -9,6 +9,6 @@ function login() {
         return;
     }
 
-    // ✅ redirect only after validation
+    //  redirect only after validation
     window.location.href = "../front/front.html";
 }

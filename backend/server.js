@@ -1,85 +1,136 @@
+// ==========================
+// IMPORTS
+// ==========================
 const express = require("express");
+const mongoose = require("mongoose");
 const cors = require("cors");
 
+// ==========================
+// APP SETUP
+// ==========================
 const app = express();
 const PORT = 3000;
 
 app.use(cors());
 app.use(express.json());
 
-// Temporary storage (like a notebook)
-let skillPosts = [];
+// ==========================
+// MONGODB CONNECTION
+// ==========================
+mongoose
+  .connect(
+    "mongodb+srv://<pranith_26>:<suba2610>@cluster007.dbjkvjf.mongodb.net/skillswap?retryWrites=true&w=majority"
+  )
+  .then(() => console.log("✅ MongoDB Connected"))
+  .catch(err => console.error("❌ MongoDB Error:", err));
 
-/* TEST */
+// ==========================
+// SCHEMAS & MODELS
+// ==========================
+
+// USER SCHEMA
+const userSchema = new mongoose.Schema({
+  username: { type: String, unique: true },
+  points: { type: Number, default: 100 },
+  unlockedCourses: [String]
+});
+
+const User = mongoose.model("User", userSchema);
+
+// SKILL POST SCHEMA
+const skillSchema = new mongoose.Schema({
+  title: String,
+  description: String,
+  category: String,
+  shareType: String,
+  createdAt: { type: Date, default: Date.now }
+});
+
+const Skill = mongoose.model("Skill", skillSchema);
+
+// ==========================
+// ROUTES
+// ==========================
+
+// TEST ROUTE
 app.get("/", (req, res) => {
-    res.send("SkillSwap backend running 🚀");
+  res.send("SkillSwap backend running 🚀");
 });
 
-/* POST SKILL */
-app.post("/api/post-skill", (req, res) => {
-    const { title, description, category, shareType } = req.body;
+// ==========================
+// CREATE / GET USER
+// ==========================
+app.post("/api/user", async (req, res) => {
+  const { username } = req.body;
 
-    if (!title || !description) {
-        return res.status(400).json({ message: "Missing fields" });
-    }
+  let user = await User.findOne({ username });
+  if (!user) {
+    user = new User({ username });
+    await user.save();
+  }
 
-    const newPost = {
-        id: skillPosts.length + 1,
-        title,
-        description,
-        category,
-        shareType,
-        createdAt: new Date()
-    };
-
-    skillPosts.push(newPost);
-
-    console.log("📌 New Skill Posted:", newPost);
-
-    res.json({
-        message: "Skill posted successfully",
-        post: newPost
-    });
+  res.json(user);
 });
 
-/* GET ALL SKILLS (for later) */
-app.get("/api/skills", (req, res) => {
-    res.json(skillPosts);
-});
-
-/* START SERVER */
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
-const express = require("express");
-const cors = require("cors");
-
-const app = express();
-const PORT = 3000;
-
-app.use(cors());
-app.use(express.json());
-
-let skills = [];
-
-app.post("/api/post-skill", (req, res) => {
+// ==========================
+// POST A SKILL
+// ==========================
+app.post("/api/post-skill", async (req, res) => {
   const { title, description, category, shareType } = req.body;
 
-  const newSkill = {
-    id: skills.length + 1,
+  if (!title || !description) {
+    return res.status(400).json({ message: "Missing fields" });
+  }
+
+  const newSkill = new Skill({
     title,
     description,
     category,
     shareType
-  };
+  });
 
-  skills.push(newSkill);
-  console.log("New Skill:", newSkill);
+  await newSkill.save();
 
-  res.json({ message: "Skill saved" });
+  res.json({
+    message: "Skill posted successfully",
+    skill: newSkill
+  });
 });
 
+// ==========================
+// GET ALL SKILLS
+// ==========================
+app.get("/api/skills", async (req, res) => {
+  const skills = await Skill.find();
+  res.json(skills);
+});
+
+// ==========================
+// BUY COURSE (20 POINTS)
+// ==========================
+app.post("/api/buy-course", async (req, res) => {
+  const { username, course } = req.body;
+  const COST = 20;
+
+  const user = await User.findOne({ username });
+  if (!user) return res.status(404).json({ msg: "User not found" });
+
+  if (user.points < COST) {
+    return res.status(400).json({ msg: "Not enough points" });
+  }
+
+  if (!user.unlockedCourses.includes(course)) {
+    user.points -= COST;
+    user.unlockedCourses.push(course);
+    await user.save();
+  }
+
+  res.json(user);
+});
+
+// ==========================
+// START SERVER
+// ==========================
 app.listen(PORT, () => {
-  console.log("Server running on port 3000");
+  console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
-

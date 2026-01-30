@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", async () => {
             btn.textContent = "✅ Pinned";
         }
     });
-});
+});//
 
 /* PIN / UNPIN */
 document.querySelectorAll(".pin-btn").forEach(btn => {

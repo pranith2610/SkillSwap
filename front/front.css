@@ -282,3 +282,9 @@ body {
     font-weight: 600;
     box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
+.card-link {
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}

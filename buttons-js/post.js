@@ -20,6 +20,9 @@ function postSkill() {
   if (!title || !desc || !selectedCategory || !selectedShare) {
     alert("Please fill all fields");
     return;
+  }else {
+    alert("Skill posted successfully");
+    return;
   }
 
   fetch("http://localhost:3000/api/post-skill", {
