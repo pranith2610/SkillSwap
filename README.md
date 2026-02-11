@@ -3,18 +3,18 @@ SkillSwap is a peer-to-peer skill exchange platform that allows individuals to t
 
 The platform promotes collaborative learning, community growth, and equal opportunity by creating a space where knowledge becomes currency.
 
-🚀 Key Features
+* Key Features
 
-👤 User profiles showcasing skills offered & wanted
+* User profiles showcasing skills offered & wanted
 
-🔍 Smart skill matching system
+* Smart skill matching system
 
-💬 Real-time chat for collaboration
+* Real-time chat for collaboration
 
-⭐ Rating & feedback system
+* Rating & feedback system
 
-📌 Skill request & acceptance workflow
+* Skill request & acceptance workflow
 
-🎯 Objective
+* Objective
 
 To bridge the skill gap among students and professionals by enabling a practical, real-world learning ecosystem driven by mutual exchange.
